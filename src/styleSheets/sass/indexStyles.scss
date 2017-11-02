@@ -1,0 +1,14 @@
+/** main **/
+
+@import "reset";
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+.cover {
+	height: 100%;
+	width: 100%;
+}
+
+@import "./sections/landing.scss";

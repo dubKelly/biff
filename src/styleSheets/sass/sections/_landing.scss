@@ -1,0 +1,23 @@
+/** _landing **/
+
+@import "../variables";
+
+.landing {
+	height: 100%;
+	background-image: url("../../images/office_01_1920.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.landingCover {
+	background-color: $dark;
+	opacity: 0.8;
+}
+.blue {
+	position: absolute;
+	height: 190px;
+	width: 190px;
+	border: 8px solid $accent;
+	left: 50%;
+	transform: translate(-50%, -57%) rotate(45deg);
+}
