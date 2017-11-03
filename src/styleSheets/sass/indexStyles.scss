@@ -1,14 +1,55 @@
 /** main **/
 
 @import "reset";
+@import "variables";
 
 html, body {
 	height: 100%;
 	overflow: hidden;
 }
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Montserrat", sans-serif;
+	font-size: 64px;
+	color: white;
+	transition: transform 0.4s ease-in-out;
+}
+h1.open {
+	transform: translate(-100%, -150%);
+}
 .cover {
+	position: absolute;
 	height: 100%;
 	width: 100%;
 }
+.box {
+	position: absolute;
+}
+.thickAccent {
+	border: 12px solid $accent;
+}
+.ex, .plus {
+	position: absolute;
+	content: "";
+}
+.ex.med {
+	height: 2px;
+	width: 60px;
+}
+.accent {
+	background-color: $accent;
+}
+.underline {
+	content: "";
+	height: 1px;
+	width: 52px;
+}
+.plus.sm {
+	height: 4px;
+	width: 20px;
+}
 
-@import "./sections/landing.scss";
+@import "sections/landing";

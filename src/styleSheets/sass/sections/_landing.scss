@@ -13,11 +13,64 @@
 	background-color: $dark;
 	opacity: 0.8;
 }
-.blue {
-	position: absolute;
-	height: 190px;
-	width: 190px;
-	border: 8px solid $accent;
+.landingBox {
+	height: 200px;
+	width: 200px;
 	left: 50%;
-	transform: translate(-50%, -57%) rotate(45deg);
+	transform: translate(-50%, -60%) rotate(45deg);
+	transition: transform 0.4s ease-in-out;
+}
+.landingBox.open {
+	transform: translate(30%, 20%) rotate(45deg);
+}
+.landingEx {
+	top: 80px;
+	left: 50%;
+	transition: transform 0.4s ease-in-out;
+}
+.landingEx.neg {
+	transform: translateX(-50%) rotate(-45deg);
+}
+.landingEx.neg.open {
+	transform: translateX(-25%) rotate(45deg) scale(3, 1);
+}
+.landingEx.pos {
+	transform: translateX(-50%) rotate(45deg);
+}
+.landingEx.pos.open {
+	transform: translateX(-50%) rotate(45deg) scale(14, 1);
+}
+.landingUnderline {
+	position: absolute;
+	top: calc(50% - 20px);
+	left: calc(50% - 127px);
+}
+.landingPlusContainer {
+	position: absolute;
+	height: 45px;
+	width: 45px;
+	bottom: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	z-index: 2;
+}
+.landingPlus {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: transform 0.4s ease-in-out;
+	z-index: 1;
+}
+.landingPlus.vert {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+.landingPlus.hori {
+	transform: translate(-50%, -50%);
+}
+.landingPlusContainer.open > .landingPlus.vert {
+	transform: translate(-50%, -50%) rotate(-45deg) scale(1.5, 1);
+}
+.landingPlusContainer.open > .landingPlus.hori {
+	transform: translate(-50%, -50%) rotate(-135deg) scale(1.5, 1);
 }
