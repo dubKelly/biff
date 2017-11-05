@@ -49,7 +49,8 @@ table {
 /** _variables **/
 html, body {
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif; }
 
 h1 {
   position: absolute;
@@ -57,8 +58,8 @@ h1 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-family: "Montserrat", sans-serif;
   font-size: 64px;
+  font-weight: 700;
   color: white;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
@@ -204,3 +205,68 @@ h1.open {
 .landingPlusContainer.open > .landingPlus.hori {
   -webkit-transform: translate(-50%, -50%) rotate(-135deg) scale(1.5, 1);
           transform: translate(-50%, -50%) rotate(-135deg) scale(1.5, 1); }
+
+.landingMenu {
+  position: absolute;
+  top: 66%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 2;
+  letter-spacing: 4px;
+  -webkit-transition: all 0.4s 0.2s ease-in-out;
+  transition: all 0.4s 0.2s ease-in-out; }
+
+.landingMenu li {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.landingMenu.open li {
+  opacity: 1; }
+
+.landingMenu.open li:nth-child(1) {
+  -webkit-transition: all 0.3s 0.1s ease-in-out;
+  transition: all 0.3s 0.1s ease-in-out; }
+
+.landingMenu.open li:nth-child(1) {
+  -webkit-transform: translateX(-57px);
+          transform: translateX(-57px); }
+
+.landingMenu.open li:nth-child(2) {
+  -webkit-transition: all 0.3s 0.2s ease-in-out;
+  transition: all 0.3s 0.2s ease-in-out; }
+
+.landingMenu.open li:nth-child(2) {
+  -webkit-transform: translateX(-57px);
+          transform: translateX(-57px); }
+
+.landingMenu.open li:nth-child(3) {
+  -webkit-transition: all 0.3s 0.3s ease-in-out;
+  transition: all 0.3s 0.3s ease-in-out; }
+
+.landingMenu.open li:nth-child(3) {
+  -webkit-transform: translateX(-57px);
+          transform: translateX(-57px); }
+
+.landingMenu.open li:nth-child(4) {
+  -webkit-transition: all 0.3s 0.4s ease-in-out;
+  transition: all 0.3s 0.4s ease-in-out; }
+
+.landingMenu.open li:nth-child(4) {
+  -webkit-transform: translateX(-57px);
+          transform: translateX(-57px); }
+
+.landingMenu a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  cursor: pointer; }
+
+.landingMenu a:hover {
+  color: #33d9cb; }

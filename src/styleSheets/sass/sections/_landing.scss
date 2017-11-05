@@ -82,3 +82,56 @@
 .landingPlusContainer.open > .landingPlus.hori {
 	transform: translate(-50%, -50%) rotate(-135deg) scale(1.5, 1);
 }
+.landingMenu {
+	position: absolute;
+	top: 66%;
+	width: 100%;
+	transform: translateY(-50%);
+	font-size: 14px;
+	font-weight: 200;
+	text-transform: uppercase;
+	text-align: right;
+	line-height: 2;
+	letter-spacing: 4px;
+	transition: all 0.4s 0.2s ease-in-out;
+}
+.landingMenu li {
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+.landingMenu.open li {
+	opacity: 1;
+}
+.landingMenu.open li:nth-child(1) {
+	transition: all 0.3s 0.1s ease-in-out;
+}
+.landingMenu.open li:nth-child(1) {
+	transform: translateX(-57px);
+}
+.landingMenu.open li:nth-child(2) {
+	transition: all 0.3s 0.2s ease-in-out;
+}
+.landingMenu.open li:nth-child(2) {
+	transform: translateX(-57px);
+}
+.landingMenu.open li:nth-child(3) {
+	transition: all 0.3s 0.3s ease-in-out;
+}
+.landingMenu.open li:nth-child(3) {
+	transform: translateX(-57px);
+}
+.landingMenu.open li:nth-child(4) {
+	transition: all 0.3s 0.4s ease-in-out;
+}
+.landingMenu.open li:nth-child(4) {
+	transform: translateX(-57px);
+}
+.landingMenu a {
+	text-decoration: none;
+	color: white;
+	transition: color 0.2s ease-out;
+	cursor: pointer;
+}
+.landingMenu a:hover {
+	color: $accent;
+}
