@@ -52,6 +52,9 @@ html, body {
   overflow: hidden;
   font-family: "Montserrat", sans-serif; }
 
+/*::-webkit-scrollbar {
+	width: 0px;
+}*/
 h1 {
   position: absolute;
   top: 50%;
@@ -100,6 +103,40 @@ h1.open {
 .plus.sm {
   height: 4px;
   width: 20px; }
+
+section {
+  position: relative;
+  height: 100%; }
+
+.subSection {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  z-index: 4; }
+
+.subSection.selected {
+  z-index: 3; }
+
+.buffer, .sectionMain {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.buffer {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+
+.sectionMain {
+  -webkit-transition: -webkit-transform 0.5s 0.1s ease-in-out;
+  transition: -webkit-transform 0.5s 0.1s ease-in-out;
+  transition: transform 0.5s 0.1s ease-in-out;
+  transition: transform 0.5s 0.1s ease-in-out, -webkit-transform 0.5s 0.1s ease-in-out; }
+
+section.selected .buffer, section.selected .sectionMain {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
 
 /** _landing **/
 /** _variables **/
@@ -261,12 +298,15 @@ h1.open {
   -webkit-transform: translateX(-57px);
           transform: translateX(-57px); }
 
-.landingMenu a {
-  text-decoration: none;
+.landingMenu span {
   color: white;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
   cursor: pointer; }
 
-.landingMenu a:hover {
+.landingMenu span:hover {
   color: #33d9cb; }
+
+/** _teamOne **/
+.teamOneMain {
+  background-color: white; }

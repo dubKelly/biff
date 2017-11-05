@@ -8,6 +8,9 @@ html, body {
 	overflow: hidden;
 	font-family: "Montserrat", sans-serif;
 }
+/*::-webkit-scrollbar {
+	width: 0px;
+}*/
 h1 {
 	position: absolute;
 	top: 50%;
@@ -52,5 +55,33 @@ h1.open {
 	height: 4px;
 	width: 20px;
 }
+section {
+	position: relative;
+	height: 100%;
+}
+.subSection {
+	position: fixed;
+	top: 100%;
+	width: 100%;
+	z-index: 4;
+}
+.subSection.selected {
+	z-index: 3;
+}
+.buffer, .sectionMain {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.buffer {
+	transition: transform 0.3s ease-in-out;
+}
+.sectionMain {
+	transition: transform 0.5s 0.1s ease-in-out;
+}
+section.selected .buffer, section.selected .sectionMain {
+	transform: translateY(-100%);
+}
 
 @import "sections/landing";
+@import "sections/teamOne";
