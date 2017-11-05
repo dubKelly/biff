@@ -155,7 +155,18 @@ h1.open {
 .landingUnderline {
   position: absolute;
   top: calc(50% - 20px);
-  left: calc(50% - 127px); }
+  left: calc(50% - 127px);
+  width: 1px;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+.landingUnderline.open {
+  -webkit-transform: translateX(26px) scale(52, 1);
+          transform: translateX(26px) scale(52, 1);
+  opacity: 1;
+  -webkit-transition: all 0.3s 0.2s ease-in-out;
+  transition: all 0.3s 0.2s ease-in-out; }
 
 .landingPlusContainer {
   position: absolute;

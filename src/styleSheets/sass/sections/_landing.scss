@@ -44,6 +44,14 @@
 	position: absolute;
 	top: calc(50% - 20px);
 	left: calc(50% - 127px);
+	width: 1px;
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+}
+.landingUnderline.open {
+	transform: translateX(26px) scale(52, 1);
+	opacity: 1;
+	transition: all 0.3s 0.2s ease-in-out;
 }
 .landingPlusContainer {
 	position: absolute;
