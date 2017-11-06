@@ -36,34 +36,33 @@
 
 		navItem[i].onclick = function(e) {
 			targetIndex = parseInt(e.target.getAttribute('data-targetIndex'), 10);
+			sectionIndex = targetIndex;
 
 			sections[targetIndex].classList.add('selected');
 		}
 	}
 
-	var scrolled = false;
+	var scrolling = false;
 	var reset;
 
 	window.onwheel = function(e) {
-		if (!scrolled) {
-			scrolled = true;
-			
-			// TODO: fix scroll bug
+		if (!scrolling) {
+			scrolling = true;
 
 			if (e.deltaY > 0 && sectionIndex < sections.length - 1) {
 				sections[sectionIndex + 1].classList.add('selected');
 				sections[sectionIndex].classList.remove('selected');
 				sectionIndex++;
 			}
-			else if (sectionIndex > 0) {
+			else if (e.deltaY < 0 && sectionIndex > 0) {
 				sections[sectionIndex - 1].classList.add('selected');
 				sections[sectionIndex].classList.remove('selected');
 				sectionIndex--;
 			}
 
-			reset = setTimeout(function() {
-				clearTimeout(reset);
-				scrolled = false;
+			resetScrolling = setTimeout(function() {
+				clearTimeout(resetScrolling);
+				scrolling = false;
 			}, 600);
 		}
 		else {

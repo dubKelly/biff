@@ -307,6 +307,6 @@ section.selected .buffer, section.selected .sectionMain {
 .landingMenu span:hover {
   color: #33d9cb; }
 
-/** _teamOne **/
-.teamOneMain {
+/** _about **/
+.aboutMain {
   background-color: white; }
